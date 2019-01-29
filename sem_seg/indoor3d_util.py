@@ -48,7 +48,9 @@ def collect_point_label(anno_path, out_filename, file_format='txt'):
         the points are shifted before save, the most negative point is now at origin.
     """
     points_list = []
-    
+
+
+    # glob.glob(pathname) return list of path names that match pathname, can be absolute or relative
     for f in glob.glob(os.path.join(anno_path, '*.txt')):
         cls = os.path.basename(f).split('_')[0]
         if cls not in g_classes: # note: in some room there is 'staris' class..

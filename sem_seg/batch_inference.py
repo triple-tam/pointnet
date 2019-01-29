@@ -12,9 +12,16 @@ parser.add_argument('--gpu', type=int, default=0, help='GPU to use [default: GPU
 parser.add_argument('--batch_size', type=int, default=1, help='Batch Size during training [default: 1]')
 parser.add_argument('--num_point', type=int, default=4096, help='Point number [default: 4096]')
 parser.add_argument('--model_path', required=True, help='model checkpoint file path')
+# ex. log/model_filesEven.ckpt
 parser.add_argument('--dump_dir', required=True, help='dump folder path')
+# directory for output of prediction results and testing log file (log_evaluate.txt)
+# ex. log/dump
 parser.add_argument('--output_filelist', required=True, help='TXT filename, filelist, each line is an output for a room')
+# outputs: list of filenames and path of _pred.txt
+# ex. log/dump/log_test_filesEven_output_filelist.txt
 parser.add_argument('--room_data_filelist', required=True, help='TXT filename, filelist, each line is a test room data label file.')
+# input of: list of filenames and paths to apply model to; .npy or .txt only in array format
+# ex. meta/area6_data_label.txt
 parser.add_argument('--no_clutter', action='store_true', help='If true, donot count the clutter class')
 parser.add_argument('--visu', action='store_true', help='Whether to output OBJ file for prediction visualization.')
 FLAGS = parser.parse_args()
@@ -98,7 +105,8 @@ def eval_one_epoch(sess, ops, room_path, out_data_label_filename, out_gt_label_f
         fout_gt = open(os.path.join(DUMP_DIR, os.path.basename(room_path)[:-4]+'_gt.obj'), 'w')
     fout_data_label = open(out_data_label_filename, 'w')
     fout_gt_label = open(out_gt_label_filename, 'w')
-    
+
+    # downsampling / reshaping seems to happen here, but still unclear
     current_data, current_label = indoor3d_util.room2blocks_wrapper_normalized(room_path, NUM_POINT)
     current_data = current_data[:,0:NUM_POINT,:]
     current_label = np.squeeze(current_label)

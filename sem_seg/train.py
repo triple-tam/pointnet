@@ -1,3 +1,6 @@
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+
 import argparse
 import math
 import h5py
@@ -16,12 +19,14 @@ import provider
 import tf_util
 from model import *
 
+
+
 parser = argparse.ArgumentParser()
 parser.add_argument('--gpu', type=int, default=0, help='GPU to use [default: GPU 0]')
 parser.add_argument('--log_dir', default='log', help='Log dir [default: log]')
 parser.add_argument('--num_point', type=int, default=4096, help='Point number [default: 4096]')
 parser.add_argument('--max_epoch', type=int, default=50, help='Epoch to run [default: 50]')
-parser.add_argument('--batch_size', type=int, default=24, help='Batch Size during training [default: 24]')
+parser.add_argument('--batch_size', type=int, default=8, help='Batch Size during training [default: 24]')
 parser.add_argument('--learning_rate', type=float, default=0.001, help='Initial learning rate [default: 0.001]')
 parser.add_argument('--momentum', type=float, default=0.9, help='Initial learning rate [default: 0.9]')
 parser.add_argument('--optimizer', default='adam', help='adam or momentum [default: adam]')
@@ -46,7 +51,8 @@ LOG_DIR = FLAGS.log_dir
 if not os.path.exists(LOG_DIR): os.mkdir(LOG_DIR)
 os.system('cp model.py %s' % (LOG_DIR)) # bkp of model def
 os.system('cp train.py %s' % (LOG_DIR)) # bkp of train procedure
-LOG_FOUT = open(os.path.join(LOG_DIR, 'log_train.txt'), 'w')
+LOG_OUT_NAME = 'log_train_filesOdd.txt'
+LOG_FOUT = open(os.path.join(LOG_DIR, LOG_OUT_NAME), 'w') # TODO ADJUST
 LOG_FOUT.write(str(FLAGS)+'\n')
 
 MAX_NUM_POINT = 4096
@@ -60,8 +66,22 @@ BN_DECAY_CLIP = 0.99
 
 HOSTNAME = socket.gethostname()
 
-ALL_FILES = provider.getDataFiles('indoor3d_sem_seg_hdf5_data/all_files.txt')
-room_filelist = [line.rstrip() for line in open('indoor3d_sem_seg_hdf5_data/room_filelist.txt')]
+ALL_FILES = provider.getDataFiles('indoor3d_sem_seg_hdf5_data/all_files.txt') #ADJUST
+room_filelist = [line.rstrip() for line in open('indoor3d_sem_seg_hdf5_data/room_filelist.txt')] #ADJUST
+
+# run subset of dataset, for memory purposes
+USE_PRE_MODEL = False
+MODEL_IN_PATH = os.path.join(LOG_DIR, "model_filesEven.ckpt")
+MODEL_OUT_NAME = "model_filesOdd.ckpt"
+keep_files = np.arange(1,24,2)
+
+if LOG_OUT_NAME.split('_')[-1].split('.')[0] != MODEL_OUT_NAME.split('_')[-1].split('.')[0]:
+    raise ValueError('naming of model file and log file seem to be different')
+print(MODEL_OUT_NAME)
+ALL_FILES = [ALL_FILES[i] for i in keep_files]
+room_filelist = np.concatenate([room_filelist[i*1000:i*1000+1000] for i in keep_files],0)
+print('keep', len(keep_files), len(ALL_FILES), len(room_filelist))
+
 
 # Load ALL data
 data_batch_list = []
@@ -78,7 +98,7 @@ print(label_batches.shape)
 test_area = 'Area_'+str(FLAGS.test_area)
 train_idxs = []
 test_idxs = []
-for i,room_name in enumerate(room_filelist):
+for i,room_name in enumerate(room_filelist[:data_batches.shape[0]]): #ADJUST
     if test_area in room_name:
         test_idxs.append(i)
     else:
@@ -90,7 +110,7 @@ test_data = data_batches[test_idxs,...]
 test_label = label_batches[test_idxs]
 print(train_data.shape, train_label.shape)
 print(test_data.shape, test_label.shape)
-
+if test_data.shape[0] == 0: raise ValueError('test data not configured correctly')
 
 
 
@@ -152,7 +172,9 @@ def train():
             
             # Add ops to save and restore all the variables.
             saver = tf.train.Saver()
-            
+
+        print 'pre session'
+
         # Create a session
         config = tf.ConfigProto()
         config.gpu_options.allow_growth = True
@@ -160,15 +182,26 @@ def train():
         config.log_device_placement = True
         sess = tf.Session(config=config)
 
+        print 'post session'
+
         # Add summary writers
         merged = tf.summary.merge_all()
-        train_writer = tf.summary.FileWriter(os.path.join(LOG_DIR, 'train'),
-                                  sess.graph)
+        train_writer = tf.summary.FileWriter(os.path.join(LOG_DIR, 'train'), sess.graph)
         test_writer = tf.summary.FileWriter(os.path.join(LOG_DIR, 'test'))
 
-        # Init variables
-        init = tf.global_variables_initializer()
-        sess.run(init, {is_training_pl:True})
+        print 'summ writers'
+
+        # # Init variables aka clean slate for training
+        if not USE_PRE_MODEL:
+            init = tf.global_variables_initializer()
+            sess.run(init, {is_training_pl:True})
+            print 'init vars'
+
+        # Load variables values from pretrained model
+        if USE_PRE_MODEL:
+            saver.restore(sess, MODEL_IN_PATH)
+            print 'loaded vars'
+
 
         ops = {'pointclouds_pl': pointclouds_pl,
                'labels_pl': labels_pl,
@@ -187,8 +220,8 @@ def train():
             eval_one_epoch(sess, ops, test_writer)
             
             # Save the variables to disk.
-            if epoch % 10 == 0:
-                save_path = saver.save(sess, os.path.join(LOG_DIR, "model.ckpt"))
+            if epoch % 1 == 0:
+                save_path = saver.save(sess, os.path.join(LOG_DIR, MODEL_OUT_NAME))
                 log_string("Model saved in file: %s" % save_path)
 
 
@@ -263,13 +296,13 @@ def eval_one_epoch(sess, ops, test_writer):
         for i in range(start_idx, end_idx):
             for j in range(NUM_POINT):
                 l = current_label[i, j]
-                total_seen_class[l] += 1
+                total_seen_class[l] += 1 # per point basis, rather than per PC vector
                 total_correct_class[l] += (pred_val[i-start_idx, j] == l)
             
     log_string('eval mean loss: %f' % (loss_sum / float(total_seen/NUM_POINT)))
     log_string('eval accuracy: %f'% (total_correct / float(total_seen)))
-    log_string('eval avg class acc: %f' % (np.mean(np.array(total_correct_class)/np.array(total_seen_class,dtype=np.float))))
-         
+    #log_string('eval avg class acc: %f' % (np.mean(np.array(total_correct_class)/np.array(total_seen_class,dtype=np.float))))
+    log_string('eval avg class acc: %f' % np.mean([a/b if b!=0 else 0 for a,b in zip(total_correct_class, total_seen_class)])) # suited for vectors
 
 
 if __name__ == "__main__":

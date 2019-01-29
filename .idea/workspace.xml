@@ -2,36 +2,125 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11568f06-d2de-4796-b8cd-6564edfd004b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/pointnet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pointnet.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/play_by_tam.py" beforeDir="false" afterPath="$PROJECT_DIR$/play_by_tam.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_seg/batch_inference.py" beforeDir="false" afterPath="$PROJECT_DIR$/sem_seg/batch_inference.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_seg/download_data.sh" beforeDir="false" afterPath="$PROJECT_DIR$/sem_seg/download_data.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_seg/eval_iou_accuracy.py" beforeDir="false" afterPath="$PROJECT_DIR$/sem_seg/eval_iou_accuracy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_seg/indoor3d_util.py" beforeDir="false" afterPath="$PROJECT_DIR$/sem_seg/indoor3d_util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_seg/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/sem_seg/train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/utils_by_tam.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/utils_by_tam.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/pointnet$play_by_tam.coverage" NAME="play_by_tam Coverage Results" MODIFIED="1547210525054" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pointnet$utils_by_tam.coverage" NAME="utils_by_tam Coverage Results" MODIFIED="1548773496235" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
+    <SUITE FILE_PATH="coverage/pointnet$02_open3d.coverage" NAME="02_open3d Coverage Results" MODIFIED="1548688736236" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pointnet$batch_inference.coverage" NAME="batch_inference Coverage Results" MODIFIED="1548781869427" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sem_seg" />
+    <SUITE FILE_PATH="coverage/pointnet$play_by_tam.coverage" NAME="play_by_tam Coverage Results" MODIFIED="1548781122662" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="utils_by_tam.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utils/utils_by_tam.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="play_by_tam.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/play_by_tam.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="14" lean-forward="true" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.39542484">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/utils/utils_by_tam.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="262">
+                  <caret line="101" column="39" selection-start-line="101" selection-start-column="39" selection-end-line="101" selection-end-column="39" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/play_by_tam.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="338">
+                  <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/sem_seg/train.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="224">
+                  <caret line="53" selection-start-line="53" selection-end-line="54" selection-end-column="57" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/provider.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="233">
+                  <caret line="92" column="25" selection-start-line="92" selection-start-column="25" selection-end-line="92" selection-end-column="25" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/sem_seg/batch_inference.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="387">
+                  <caret line="32" column="25" lean-forward="true" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+                  <folding>
+                    <element signature="e#0#15#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../../venv_pointnet/local/lib/python2.7/site-packages/tensorflow/python/client/session.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="875">
+                  <caret line="928" selection-start-line="928" selection-end-line="928" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/sem_seg/indoor3d_util.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-45">
+                  <caret line="133" column="4" selection-start-line="133" selection-start-column="4" selection-end-line="133" selection-end-column="4" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/sem_seg/eval_iou_accuracy.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="75">
+                  <caret line="5" selection-start-line="5" selection-end-line="5" />
+                  <folding>
+                    <element signature="e#0#18#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -39,24 +128,20 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/02_open3d.py" />
+        <option value="$PROJECT_DIR$/sem_seg/train.py" />
+        <option value="$PROJECT_DIR$/sem_seg/eval_iou_accuracy.py" />
+        <option value="$PROJECT_DIR$/utils/utils_by_tam.py" />
         <option value="$PROJECT_DIR$/play_by_tam.py" />
+        <option value="$PROJECT_DIR$/sem_seg/batch_inference.py" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths />
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1280" />
-    <option name="y" value="-34" />
-    <option name="width" value="1920" />
-    <option name="height" value="1177" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="115" />
+    <option name="y" value="64" />
+    <option name="width" value="1805" />
+    <option name="height" value="1005" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -73,6 +158,11 @@
             <path>
               <item name="pointnet" type="b2602c69:ProjectViewProjectNode" />
               <item name="pointnet" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pointnet" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pointnet" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pointnet" type="b2602c69:ProjectViewProjectNode" />
@@ -97,7 +187,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Open3D" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -114,35 +204,56 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.play_by_tam">
-    <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python">
+  <component name="RunManager" selected="Python.batch_inference">
+    <configuration name="02_open3d" type="PythonConfigurationType" factoryName="Python">
       <module name="pointnet" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
-        <env name="CUDA_HOME" value="/usr/stud/tranthi/cuda:/usr/local/cuda-10.0" />
-        <env name="PATH" value="/usr/stud/tranthi/cuda/bin:/usr/local/cuda-10.0/bin" />
-        <env name="LD_LIBRARY_PATH" value="/usr/stud/tranthi/cuda/lib64:/usr/local/cuda-10.0/lib64" />
+        <env name="CUDA_HOME" value="$USER_HOME$/cuda:$PROJECT_DIR$/../../../../../local/cuda-10.0" />
+        <env name="PATH" value="$USER_HOME$/cuda/bin:$PROJECT_DIR$/../../../../../local/cuda-10.0/bin" />
+        <env name="LD_LIBRARY_PATH" value="$USER_HOME$/cuda/lib64:$PROJECT_DIR$/../../../../../local/cuda-10.0/lib64" />
       </envs>
-      <option name="SDK_HOME" value="sftp://tranthi@atcremers50.informatik.tu-muenchen.de:58022/usr/stud/tranthi/segmentation/venv_pointnet/bin/python" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="SDK_HOME" value="$PROJECT_DIR$/../../v3_pointcloud/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <PathMappingSettings>
-        <option name="pathMappings">
-          <list>
-            <mapping local-root="$PROJECT_DIR$" remote-root="/usr/stud/tranthi/segmentation/03_repos/pointnet" />
-          </list>
-        </option>
-      </PathMappingSettings>
-      <option name="SCRIPT_NAME" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/02_open3d.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="batch_inference" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="pointnet" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="PATH" value="$USER_HOME$/cuda/bin:$PROJECT_DIR$/../../../../../local/cuda-10.0/bin" />
+        <env name="CUDA_HOME" value="$USER_HOME$/cuda:$PROJECT_DIR$/../../../../../local/cuda-10.0" />
+        <env name="LD_LIBRARY_PATH" value="$USER_HOME$/cuda/lib64:$PROJECT_DIR$/../../../../../local/cuda-10.0/lib64" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sem_seg" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sem_seg/batch_inference.py" />
+      <option name="PARAMETERS" value="--model_path log/model_filesEven.ckpt --dump_dir log/dump_filesEven_customData --output_filelist log/dump_filesEven_customData/pred_filelist.txt --room_data_filelist meta/custom_data_filenames.txt" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <configuration name="play_by_tam" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pointnet" />
@@ -150,9 +261,9 @@
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
-        <env name="CUDA_HOME" value="/usr/stud/tranthi/cuda:/usr/local/cuda-10.0" />
-        <env name="PATH" value="/usr/stud/tranthi/cuda/bin:/usr/local/cuda-10.0/bin" />
-        <env name="LD_LIBRARY_PATH" value="/usr/stud/tranthi/cuda/lib64:/usr/local/cuda-10.0/lib64" />
+        <env name="CUDA_HOME" value="$USER_HOME$/cuda:$PROJECT_DIR$/../../../../../local/cuda-10.0" />
+        <env name="PATH" value="$USER_HOME$/cuda/bin:$PROJECT_DIR$/../../../../../local/cuda-10.0/bin" />
+        <env name="LD_LIBRARY_PATH" value="$USER_HOME$/cuda/lib64:$PROJECT_DIR$/../../../../../local/cuda-10.0/lib64" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -172,14 +283,43 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="utils_by_tam" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="pointnet" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils/utils_by_tam.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Unnamed" />
+      <item itemvalue="Python.02_open3d" />
       <item itemvalue="Python.play_by_tam" />
+      <item itemvalue="Python.utils_by_tam" />
+      <item itemvalue="Python.batch_inference" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.batch_inference" />
         <item itemvalue="Python.play_by_tam" />
+        <item itemvalue="Python.utils_by_tam" />
       </list>
     </recent_temporary>
   </component>
@@ -193,57 +333,123 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1547208161325</updated>
+      <workItem from="1548679532325" duration="7135000" />
+      <workItem from="1548759594140" duration="10920000" />
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="18055000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="1282" y="-148" width="1920" height="1177" extended-state="6" />
+    <frame x="115" y="64" width="1805" height="1005" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32962963" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" weight="0.32962963" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24973376" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="SciView" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13189313" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Remote Host" weight="0.32960597" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32915717" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.43735763" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.47722095" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32985657" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32801822" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Remote Host" order="3" weight="0.32960597" />
+      <window_info anchor="right" id="SciView" order="4" visible="true" weight="0.065946564" />
+      <window_info anchor="right" id="Database" order="5" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/play_by_tam.py</url>
+          <line>1</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/sem_seg/batch_inference.py</url>
+          <line>110</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/utils/utils_by_tam.py a">
+    <entry file="file://$PROJECT_DIR$/utils/utils_by_tam.py a" />
+    <entry file="file://$PROJECT_DIR$/02_open3d.py" />
+    <entry file="file://$PROJECT_DIR$/provider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="64" lean-forward="true" selection-start-line="2" selection-start-column="64" selection-end-line="2" selection-end-column="64" />
+        <state relative-caret-position="233">
+          <caret line="92" column="25" selection-start-line="92" selection-start-column="25" selection-end-line="92" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sem_seg/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="53" selection-start-line="53" selection-end-line="54" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sem_seg/eval_iou_accuracy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sem_seg/indoor3d_util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-45">
+          <caret line="133" column="4" selection-start-line="133" selection-start-column="4" selection-end-line="133" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/utils_by_tam.py">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="101" column="39" selection-start-line="101" selection-start-column="39" selection-end-line="101" selection-end-column="39" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/play_by_tam.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="14" lean-forward="true" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+        <state relative-caret-position="338">
+          <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../venv_pointnet/local/lib/python2.7/site-packages/tensorflow/python/client/session.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="875">
+          <caret line="928" selection-start-line="928" selection-end-line="928" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sem_seg/batch_inference.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="32" column="25" lean-forward="true" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
