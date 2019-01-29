@@ -4,3 +4,8 @@ log/
 data/
 *.xml
 .idea/
+sem_seg/indoor3d_sem_seg_hdf5_data/
+*.h5
+*.npy
+*.txt
+*.ply
